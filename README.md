@@ -30,7 +30,7 @@ Options that can be passed via URL:
 |font_size          |Point size to use                                               |
 |font_color         |Font color (see colors.inc)                                     |
 |background_color   |Background color (see colors.inc)                               |
-|number_format      |Whether to format number to add commas                          |
+|number_format      |Whether to format number with commas                            |
 |frame_thickness    |Thickness in pixels of outside frame                            |
 |frame_color        |Color of outside frame (see colors.inc)                         |
 
