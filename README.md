@@ -23,7 +23,7 @@ Examples:
 ![Example 4](./examples/4.png)
 
 Options that can be passed via URL:
-|Option             |Definition                                                      |
+|Option             |Description                                                     |
 |-------------------|----------------------------------------------------------------|
 |datafile           |**Required** - Counter data file name                           |
 |font               |Name of font located in font_dir to be used (no .ttf extension) |
