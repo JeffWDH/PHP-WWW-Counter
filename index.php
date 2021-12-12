@@ -13,7 +13,6 @@ $frame_color = "midnightblue"; // Frame color
 // Paths (no trailing forward slash)
 // Counter data file must be pre created and the web server requires read/write access
 // echo 1 > SomeDataFile and chmod to allow server access
-// If you have errors saying "unable to read counter data file" make sure SElinux isn't interfering
 $counter_data_dir = "/var/www/html/Counter/countdata";
 $font_dir = "/var/www/html/Counter/fonts";
 
