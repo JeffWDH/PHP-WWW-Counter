@@ -53,7 +53,7 @@ Colors for colors.inc:
 
 https://www.w3.org/TR/css-color-3/#svg-color
 
-Fonts:
+Bundled Fonts:
 
 https://fonts.google.com/specimen/Roboto
 
