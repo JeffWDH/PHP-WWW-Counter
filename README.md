@@ -36,6 +36,16 @@ Options that can be passed via URL:
 
 All of these except for datafile are optional and have defaults defined in the index.php file.
 
+The data file must be pre created and writable by the web server user. 
+
+''
+echo 1 > SomeDataFile
+chown webserveruser SomeDataFile
+chmod u+rw SomeDataFile
+''
+
+Note that you may need to change the file SElinux context and/or enable file writing for your webserver if you are using SElinux and are having issues. 
+
 Sources:
 
 Colors for colors.inc:
