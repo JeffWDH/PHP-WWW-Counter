@@ -36,7 +36,9 @@ Options that can be passed via URL:
 
 All of these except for datafile are optional and have defaults defined in the index.php file.
 
-The data file must be pre created and writable by the web server user:
+The data file must be pre created and writable by the web server user.
+
+Example:
 ```
 echo 1 > SomeDataFile
 chown webserveruser SomeDataFile
