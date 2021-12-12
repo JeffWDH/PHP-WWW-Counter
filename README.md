@@ -45,7 +45,7 @@ chown webserveruser SomeDataFile
 chmod u+rw SomeDataFile
 ```
 
-Note that you may need to change the file SElinux context and/or enable file writing for your webserver if you are using SElinux and are having issues (see ls -laZ and chcon commands. 
+Note that you may need to change the file SElinux context and/or enable file writing for your webserver if you are using SElinux and are having issues (see ls -laZ and chcon commands). 
 
 Sources:
 
