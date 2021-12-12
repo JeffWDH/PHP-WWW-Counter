@@ -165,7 +165,7 @@ function incCounter($countfile, $oldcount) {
 }
 
 function sanitizeInputFilename($input) {
-  return preg_replace("/[^[:alnum:]_-]/u", '', $_GET[$input]);
+  return preg_replace("/[^[:alnum:]._-]/u", '', $_GET[$input]);
 }
 
 function sanitizeInputText($input) {
