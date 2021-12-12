@@ -30,7 +30,7 @@ $cookie_expiration = 60;
 // Begin
 
 if (isset($_GET['datafile'])) {
-  $counter_data_file_name = sanitizeInputFilename("datafile");
+  $counter_data_file_name = sanitizeInputFilename($_GET['datafile']);
   $counter_data_file = "$counter_data_dir" . "/" . $counter_data_file_name;
   if (!file_exists($counter_data_file)) {
     die("Counter file does not exist.");
@@ -40,7 +40,7 @@ if (isset($_GET['datafile'])) {
 }
 
 if (isset($_GET['font'])) {
-  $font = sanitizeInputFilename("font");
+  $font = sanitizeInputFilename($_GET['font']);
 }
 
 $font_file = $font_dir . "/" . $font . ".ttf";
@@ -49,18 +49,18 @@ if (!file_exists($font_file)) {
 }
 
 if (isset($_GET['font_size'])) {
-  $font_size = sanitizeInputNumber("font_size");
+  $font_size = sanitizeInputNumber($_GET['font_size']);
   if ($font_size > 300) {
     die("Font size too large.");
   }
 }
 
 if (isset($_GET['font_color'])) {
-  $font_color = sanitizeInputText("font_color");
+  $font_color = sanitizeInputText($_GET['font_color']);
 }
 
 if (isset($_GET['background_color'])) {
-  $background_color = sanitizeInputText("background_color");
+  $background_color = sanitizeInputText($_GET['background_color']);
 }
 
 if (isset($_GET['number_format'])) {
@@ -72,11 +72,11 @@ if (isset($_GET['number_format'])) {
 }
 
 if (isset($_GET['frame_thickness'])) {
-  $frame_thickness = sanitizeInputNumber("frame_thickness");
+  $frame_thickness = sanitizeInputNumber($_GET['frame_thickness']);
 }
 
 if (isset($_GET['frame_color'])) {
-  $frame_color = sanitizeInputText("frame_color");
+  $frame_color = sanitizeInputText($_GET['frame_color']);
 }
 
 $count = getCounter("$counter_data_file");
@@ -165,15 +165,15 @@ function incCounter($countfile, $oldcount) {
 }
 
 function sanitizeInputFilename($input) {
-  return preg_replace("/[^[:alnum:]._-]/u", '', $_GET[$input]);
+  return preg_replace("/[^[:alnum:]._-]/u", '', $input);
 }
 
 function sanitizeInputText($input) {
-  return preg_replace("/[^[:alnum:]]/u", '', $_GET[$input]);
+  return preg_replace("/[^[:alnum:]]/u", '', $input);
 }
 
 function sanitizeInputNumber($input) {
-  return preg_replace("/[^[:digit:]]/u", '', $_GET[$input]);
+  return preg_replace("/[^[:digit:]]/u", '', $input);
 }
 
 ?>
