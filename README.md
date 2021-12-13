@@ -23,16 +23,17 @@ Examples:
 ![Example 4](./examples/4.png)
 
 Options that can be passed via URL:
-|Option             |Description                                                     |
-|-------------------|----------------------------------------------------------------|
-|datafile           |**Required** - Counter data file name                           |
-|font               |Name of font located in font_dir to be used (no .ttf extension) |
-|font_size          |Point size to use                                               |
-|font_color         |Font color (see colors.inc)                                     |
-|background_color   |Background color (see colors.inc)                               |
-|number_format      |Whether to format number with commas                            |
-|frame_thickness    |Thickness in pixels of outside frame                            |
-|frame_color        |Color of outside frame (see colors.inc)                         |
+|Option             |Description                                                           |
+|-------------------|----------------------------------------------------------------------|
+|datafile           |**Required** - Counter data file name                                 |
+|font               |Name of font located in font_dir to be used (no .ttf extension)       |
+|font_size          |Point size to use                                                     |
+|font_color         |Font color (see colors.inc)                                           |
+|background_color   |Background color (see colors.inc)                                     |
+|number_format      |Whether to format number with commas                                  |
+|frame_thickness    |Thickness in pixels of outside frame                                  |
+|frame_color        |Color of outside frame (see colors.inc)                               |
+|hidden             |Setting hidden=1 will show a 1x1 transparent image instead of counter |
 
 All of these except for datafile are optional and have defaults defined in the index.php file.
 
